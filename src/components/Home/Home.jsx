@@ -14,8 +14,8 @@ const Home = () => {
       .then((data) => setJobs(data));
   }, []);
 
-  const jobTypes = useLoaderData();
-  // console.log(jobTypes);
+  const { category, jobs: jobTypes } = useLoaderData();
+  console.log(category, jobTypes);
   return (
     <div>
       {/* ------Header Start------ */}
@@ -73,7 +73,7 @@ const Home = () => {
       {/* ------Feature Jobs------ */}
 
       <div>
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <h1 className="text-3xl font-bold">Featured Jobs</h1>
           <p className="text-gray-600">
             Explore thousands of job opportunities with all the information you
@@ -81,13 +81,36 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 justify-center items-center place-items-center gap-20 mt-20">
+      <div className="grid grid-cols-2 justify-center items-center place-items-center gap-4 ">
         {jobs.map((job) => (
           <FeaturedJobs keys={job.id} job={job}></FeaturedJobs>
         ))}
-        <div className="content-center mx-auto place-self-center place-content-center">
-          <Button>See All Jobs</Button>
+      </div>
+
+      <div className="w-[70%] mx-auto">
+        <div className="grid grid-cols-2 gap-4">
+          {category.map((job, index) => (
+            <div key={index} className="border shadow-sm rounded p-8">
+              <div className="w-full">
+                <img className="w-[100px]" src={job?.company_logo} alt="" />
+              </div>
+              <h1 className="my-3 font-medium text-gray-800">
+                {job.job_title}
+              </h1>
+              <h1>{job.company_name}</h1>
+              <p>{job.remote_or_onsite}</p>
+              <h5> {job.duration}</h5>
+              <div className="">
+                <p>{job.location}</p> <p>{job.salary}</p>
+              </div>
+              <Button>View Details</Button>
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div className="w-[99%]  mx-auto text-center">
+        <Button>See All Jobs</Button>
       </div>
     </div>
   );

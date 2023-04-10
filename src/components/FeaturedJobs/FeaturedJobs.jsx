@@ -16,7 +16,7 @@ const FeaturedJobs = (props) => {
   } = props.job;
   return (
     <div className="">
-      <div className="w-96  border border-gray-200 pt-8 pl-8 pb-10 rounded-md bg-purple-50">
+      {/* <div className="w-96  border border-gray-200 pt-8 pl-8 pb-10 rounded-md bg-purple-50">
         <img className="h-9 w-28" src={company_logo} alt="" />
         <h1 className="font-bold text-xl text-gray-500 mt-4">{job_title}</h1>
         <h1 className=" text-gray-500 my-3">{company_name}</h1>
@@ -32,7 +32,7 @@ const FeaturedJobs = (props) => {
           <p>{location}</p> <p>{salary}</p>
         </div>
         <Button>View Details</Button>
-      </div>
+      </div> */}
     </div>
   );
 };
