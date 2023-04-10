@@ -1,0 +1,104 @@
+[
+  {
+    "id": "1",
+    "company_logo": "https://user-images.githubusercontent.com/121633983/230816132-4225a446-47ca-44ef-ab2a-a3364b3ec296.png",
+    "job_title": "Technical Database Engineer",
+    "company_name": "Google LLC",
+    "remote_or_onsite": "Remote",
+    "location": "Dhaka, Bangladesh",
+    "duration": "Full-time",
+    "salary": "100K - 150K",
+    "job_description": "We are seeking an experienced web developer to join our team.",
+    "job_responsibility": "Develop and maintain high-quality web applications using HTML/CSS, JavaScript, and PHP.",
+    "requirements": "Bachelor's degree in Computer Science or related field.",
+    "experiences": "3+ years of experience in web development.",
+
+    "phone": "555-123-4567",
+    "email": "jobs@abccorp.com"
+  },
+  {
+    "id": "2",
+    "company_logo": "https://user-images.githubusercontent.com/121633983/230816138-650f5bb7-0bf4-49e5-a2d2-18303a7437d0.png",
+    "job_title": "Senior Product Designer",
+    "company_name": "Netflix",
+    "remote_or_onsite": "Onsite",
+    "location": "San Francisco, CA",
+    "duration": "Full-time",
+    "salary": "120,000k - 140,000k",
+    "job_description": "We are seeking a skilled software engineer to help build our next-generation platform.",
+    "job_responsibility": "Design and implement scalable and reliable backend services using Java and MySQL.",
+    "requirements": "Bachelor's or Master's degree in Computer Science or related field.",
+    "experiences": "5+ years of experience in software engineering.",
+
+    "phone": "555-234-5678",
+    "email": "jobs@xyzinc.com"
+  },
+  {
+    "id": "3",
+    "company_logo": "https://user-images.githubusercontent.com/121633983/230816142-db70704a-fafc-422a-bd5e-c0d641dbc337.png",
+    "job_title": "Software Engineer",
+    "company_name": "Tesla",
+    "remote_or_onsite": "Onsite",
+    "location": "New York, NY",
+    "duration": "Part-time",
+    "salary": "90,000k - 110,000k",
+    "job_description": "We are seeking a talented UX designer to create intuitive and engaging user experiences.",
+    "job_responsibility": "Design and prototype user interfaces for web and mobile applications using Sketch, Adobe XD, or Figma.",
+    "requirements": "Bachelor's or Master's degree in Design, Human-Computer Interaction, or related field.",
+    "experiences": "3+ years of experience in UX design.",
+
+    "phone": "555-345-6789",
+    "email": "jobs@designco.com"
+  },
+  {
+    "id": "4",
+    "company_logo": "https://user-images.githubusercontent.com/121633983/230816134-221ef06f-038d-4291-b8c1-70f3882a68bf.png",
+    "job_title": "UX Designer",
+    "company_name": "Air Bnb",
+    "remote_or_onsite": "Remote",
+    "location": "New York, NY",
+    "duration": "Full-time",
+    "salary": "90,000k - $10,0000k",
+    "job_description": "We are seeking a talented UX designer to create intuitive and engaging user experiences.",
+    "job_responsibility": "Design and prototype user interfaces for web and mobile applications using Sketch, Adobe XD, or Figma.",
+    "requirements": "Bachelor's or Master's degree in Design, Human-Computer Interaction, or related field.",
+    "experiences": "3+ years of experience in UX design.",
+
+    "phone": "555-345-6789",
+    "email": "jobs@designco.com"
+  },
+  {
+    "id": "5",
+    "company_logo": "https://user-images.githubusercontent.com/121633983/230816129-293a8d76-aa0f-444d-a34f-e73479eacd0f.png",
+    "job_title": "HR Head",
+    "company_name": "Career Hub",
+    "remote_or_onsite": "Onsite",
+    "location": "New York, NY",
+    "duration": "Full-time",
+    "salary": "50,000k - 80,000k",
+    "job_description": "We are seeking a talented UX designer to create intuitive and engaging user experiences.",
+    "job_responsibility": "Design and prototype user interfaces for web and mobile applications using Sketch, Adobe XD, or Figma.",
+    "requirements": "Bachelor's or Master's degree in Design, Human-Computer Interaction, or related field.",
+    "experiences": "3+ years of experience in UX design.",
+
+    "phone": "555-345-6789",
+    "email": "jobs@designco.com"
+  },
+  {
+    "id": "5",
+    "company_logo": "https://user-images.githubusercontent.com/121633983/230816129-293a8d76-aa0f-444d-a34f-e73479eacd0f.png",
+    "job_title": "HR Head",
+    "company_name": "Career Hub",
+    "remote_or_onsite": "Onsite",
+    "location": "New York, NY",
+    "duration": "Full-time",
+    "salary": "50,000k - 80,000k",
+    "job_description": "We are seeking a talented UX designer to create intuitive and engaging user experiences.",
+    "job_responsibility": "Design and prototype user interfaces for web and mobile applications using Sketch, Adobe XD, or Figma.",
+    "requirements": "Bachelor's or Master's degree in Design, Human-Computer Interaction, or related field.",
+    "experiences": "3+ years of experience in UX design.",
+
+    "phone": "555-345-6789",
+    "email": "jobs@designco.com"
+  }
+]

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import Button from "../Button/Button";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -43,9 +44,7 @@ const Header = () => {
           <NavLink to="/blogs">Blog</NavLink>
         </li>
       </ul>
-      <button className="my-1 md:my-0 bg-gradient-to-r from-violet-500 to-indigo-500 p-2 rounded-md text-white font-bold ">
-        Start Applying
-      </button>
+      <Button>Start Applying</Button>
     </nav>
   );
 };
