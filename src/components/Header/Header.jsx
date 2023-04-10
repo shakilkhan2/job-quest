@@ -31,6 +31,9 @@ const Header = () => {
         }`}
       >
         <li className="mx-2 my-1 md:my-0">
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li className="mx-2 my-1 md:my-0">
           <NavLink to="/statistics">Statistics</NavLink>
         </li>
         <li className="mx-2 my-1 md:my-0">

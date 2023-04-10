@@ -35,9 +35,9 @@ const Home = () => {
           need. Its your future
         </p>
       </div>
-      <div className=" md:flex justify-center mt-8 mb-32 gap-8 ">
+      <div className="flex flex-col justify-center md:flex md:justify-center md:mt-8 md:mb-32 gap-8 ">
         {jobTypes.map((jobType) => (
-          <div className="bg-purple-50 w-60 h-52 pt-8 pl-8 rounded-md">
+          <div className="bg-purple-50 w-20 h-20 md:w-60 md:h-52 pt-8 pl-8 rounded-md ">
             <img
               className="bg-purple-200 p-2 rounded-md"
               src={jobType.logo}
