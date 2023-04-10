@@ -81,10 +81,13 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div className="grid grid-cols-2 justify-center items-center place-items-center gap-20 mt-20">
         {jobs.map((job) => (
           <FeaturedJobs keys={job.id} job={job}></FeaturedJobs>
         ))}
+        <div className="content-center mx-auto place-self-center place-content-center">
+          <Button>See All Jobs</Button>
+        </div>
       </div>
     </div>
   );
