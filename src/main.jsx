@@ -11,6 +11,7 @@ import FeaturedJobs from "./components/FeaturedJobs/FeaturedJobs";
 import loadData from "./utils/loadData";
 import Error from "./components/Error/Error";
 import JobDetails from "./components/JobDetails/JobDetails";
+import Loading from "./components/Loading/Loading";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <Error />,
+      },
+      {
+        path: "loading",
+        element: <Loading />,
       },
     ],
   },
