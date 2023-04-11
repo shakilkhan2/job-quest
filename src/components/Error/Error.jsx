@@ -3,7 +3,7 @@ import React from "react";
 const Error = () => {
   return (
     <div className="text-center">
-      <h1 className="text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500 mt-40  ">
+      <h1 className="text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500 mt-40 py-2  ">
         404|Page not found!
       </h1>
       <p>
