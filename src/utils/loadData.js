@@ -1,13 +1,13 @@
 const loadData = async (limit) => {
-  const res = await fetch("/category.json");
-  const data = await res.json();
-  const jobsRes = await fetch("/jobType.json");
-  const jobs = await jobsRes.json();
+  const [category, jobs] = await Promise.all([
+    fetch("/category.json").then((res) => res.json()),
+    fetch("/jobType.json").then((res) => res.json()),
+  ]);
 
   if (limit) {
-    return { category: data.slice(0, 4), jobs };
+    return { category: category.slice(0, 4), jobs };
   }
-  return { category: data, jobs };
+  return { category, jobs };
 };
 
 export default loadData;

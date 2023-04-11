@@ -32,16 +32,44 @@ const Header = () => {
         }`}
       >
         <li className="mx-2 my-1 md:my-0">
-          <NavLink to="/">Home</NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-purple-500" : "default"
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
         </li>
         <li className="mx-2 my-1 md:my-0">
-          <NavLink to="/statistics">Statistics</NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-purple-500" : "default"
+            }
+            to="/statistics"
+          >
+            Statistics
+          </NavLink>
         </li>
         <li className="mx-2 my-1 md:my-0">
-          <NavLink to="/applied-jobs">Applied Jobs</NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-purple-500" : "default"
+            }
+            to="/applied-jobs"
+          >
+            Applied Jobs
+          </NavLink>
         </li>
         <li className="mx-2 my-1 md:my-0">
-          <NavLink to="/blogs">Blog</NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-purple-500" : "default"
+            }
+            to="/blogs"
+          >
+            Blog
+          </NavLink>
         </li>
       </ul>
       <Button>Start Applying</Button>

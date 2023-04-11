@@ -8,8 +8,8 @@
     "location": "Dhaka, Bangladesh",
     "duration": "Full-time",
     "salary": "100K - 150K",
-    "job_description": "We are seeking an experienced web developer to join our team.",
-    "job_responsibility": "Develop and maintain high-quality web applications using HTML/CSS, JavaScript, and PHP.",
+    "job_description": "We are hiring a web developer with experience in React and Node.js. Your role will be to develop and maintain web applications, working closely with our design and product teams. You must have a strong understanding of web development principles and be able to work independently. Staying current with the latest web development trends is essential.",
+    "job_responsibility": "Your responsibilities as a web developer include designing and implementing responsive, scalable, user-friendly web solutions using React and Node.js. You will work with design and product teams to ensure websites and apps are visually appealing, functional, and meet business requirements. Staying current with web development trends and working independently is essential.",
     "requirements": "Bachelor's degree in Computer Science or related field.",
     "experiences": "3+ years of experience in web development.",
 
@@ -85,20 +85,20 @@
     "email": "jobs@designco.com"
   },
   {
-    "id": "5",
-    "company_logo": "https://user-images.githubusercontent.com/121633983/230816129-293a8d76-aa0f-444d-a34f-e73479eacd0f.png",
-    "job_title": "HR Head",
-    "company_name": "Career Hub",
-    "remote_or_onsite": "Onsite",
-    "location": "New York, NY",
+    "id": "1",
+    "company_logo": "https://user-images.githubusercontent.com/121633983/230816132-4225a446-47ca-44ef-ab2a-a3364b3ec296.png",
+    "job_title": "Technical Database Engineer",
+    "company_name": "Google LLC",
+    "remote_or_onsite": "Remote",
+    "location": "Dhaka, Bangladesh",
     "duration": "Full-time",
-    "salary": "50,000k - 80,000k",
-    "job_description": "We are seeking a talented UX designer to create intuitive and engaging user experiences.",
-    "job_responsibility": "Design and prototype user interfaces for web and mobile applications using Sketch, Adobe XD, or Figma.",
-    "requirements": "Bachelor's or Master's degree in Design, Human-Computer Interaction, or related field.",
-    "experiences": "3+ years of experience in UX design.",
+    "salary": "100K - 150K",
+    "job_description": "We are seeking an experienced web developer to join our team.",
+    "job_responsibility": "Develop and maintain high-quality web applications using HTML/CSS, JavaScript, and PHP.",
+    "requirements": "Bachelor's degree in Computer Science or related field.",
+    "experiences": "3+ years of experience in web development.",
 
-    "phone": "555-345-6789",
-    "email": "jobs@designco.com"
+    "phone": "555-123-4567",
+    "email": "jobs@abccorp.com"
   }
 ]

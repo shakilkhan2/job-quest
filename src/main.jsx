@@ -9,6 +9,8 @@ import Blog from "./components/Blog/Blog";
 import Home from "./components/Home/Home";
 import FeaturedJobs from "./components/FeaturedJobs/FeaturedJobs";
 import loadData from "./utils/loadData";
+import Error from "./components/Error/Error";
+import JobDetails from "./components/JobDetails/JobDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,21 @@ const router = createBrowserRouter([
         loader: async () => loadData(true),
       },
       {
+        path: "/jobs-details/:id",
+        element: <JobDetails />,
+        loader: async ({ params }) => {
+          const res = await fetch("/category.json");
+          const data = await res.json();
+
+          const job = data.find((single) => single.id === params.id);
+          if (job) {
+            return job;
+          } else {
+            return null;
+          }
+        },
+      },
+      {
         path: "statistics",
         element: <Statistics />,
       },
@@ -31,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "blogs",
         element: <Blog />,
+      },
+      {
+        path: "*",
+        element: <Error />,
       },
     ],
   },

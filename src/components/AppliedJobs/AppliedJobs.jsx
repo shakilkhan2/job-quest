@@ -3,7 +3,11 @@ import React from "react";
 const AppliedJobs = () => {
   return (
     <div>
-      <h1>Here will be shown applied job only.</h1>
+      <div>
+        <h1 className="text-3xl font-bold text-center pt-20 pb-40 bg-purple-50">
+          Applied Jobs
+        </h1>
+      </div>
     </div>
   );
 };
