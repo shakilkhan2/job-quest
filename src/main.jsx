@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         loader: async () => loadData(true),
       },
       {
-        path: "/jobs-details/:id",
+        path: "/job/:id",
         element: <JobDetails />,
         loader: async ({ params }) => {
           const res = await fetch("/category.json");

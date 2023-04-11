@@ -10,8 +10,7 @@ const Blog = () => {
 
       <div className="w-3/4 mx-auto my-8">
         <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500">
-          <span className="">1.</span> There will be blog with the answering
-          questions.
+          1. When should you use context API?
         </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
