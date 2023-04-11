@@ -12,3 +12,7 @@
 * "Applied Jobs" section will show me where I applied.
 * In the "Blog" section I can get various questions answer by reading blogs.
 * And if we use any wrong route it ill will show us error and will suggest us to back on home page.
+
+---
+
+---
