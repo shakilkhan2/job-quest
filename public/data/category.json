@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Account & Finance",
+    "description": "300 Jobs Available",
+    "icon": "bx bx-calculator"
+  },
+  {
+    "id": 2,
+    "name": "Creative Design",
+    "description": "100+ Jobs Available",
+    "icon": "bx bx-bulb"
+  },
+  {
+    "id": 3,
+    "name": "Marketing & Sales",
+    "description": "150 Jobs Available",
+    "icon": "bx bx-user-voice"
+  },
+  {
+    "id": 4,
+    "name": "Engineering Job",
+    "description": "243 Jobs Available",
+    "icon": "bx bx-chip"
+  }
+]

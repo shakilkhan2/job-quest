@@ -12,7 +12,6 @@
     "job_responsibility": "Your responsibilities as a web developer include designing and implementing responsive, scalable, user-friendly web solutions using React and Node.js. You will work with design and product teams to ensure websites and apps are visually appealing, functional, and meet business requirements. Staying current with web development trends and working independently is essential.",
     "requirements": "Bachelor's degree in Computer Science or related field.",
     "experiences": "3+ years of experience in web development.",
-
     "phone": "555-123-4567",
     "email": "jobs@abccorp.com"
   },
@@ -85,9 +84,9 @@
     "email": "jobs@designco.com"
   },
   {
-    "id": "1",
+    "id": "6",
     "company_logo": "https://user-images.githubusercontent.com/121633983/230816132-4225a446-47ca-44ef-ab2a-a3364b3ec296.png",
-    "job_title": "Technical Database Engineer",
+    "job_title": "Senior System Engineer",
     "company_name": "Google LLC",
     "remote_or_onsite": "Remote",
     "location": "Dhaka, Bangladesh",

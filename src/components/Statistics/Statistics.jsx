@@ -7,45 +7,48 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
+import InfoSection from "../infoSection/InfoSection";
 
 const data = [
   {
-    name: "Assignment-1",
+    name: "Assig-1",
 
     number: 60,
   },
   {
-    name: "Assignment-2",
+    name: "Assig-2",
     number: 55,
   },
   {
-    name: "Assignment-3",
+    name: "Assig-3",
     number: 40,
   },
   {
-    name: "Assignment-4",
+    name: "Assig-4",
     number: 58,
   },
   {
-    name: "Assignment-5",
+    name: "Assig-5",
     number: 50,
   },
   {
-    name: "Assignment-6",
+    name: "Assig-6",
     number: 58,
   },
   {
-    name: "Assignment-7",
+    name: "Assig-7",
     number: 60,
+  },
+  {
+    name: "Assig-8",
+    number: 58,
   },
 ];
 
 const Statistics = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center pt-16 pb-20 bg-purple-50">
-        Statistics
-      </h1>
+      <InfoSection name={"Statistics"} />
       <div className="my-4 flex  justify-center ">
         <AreaChart
           width={850}
@@ -71,8 +74,8 @@ const Statistics = () => {
         </AreaChart>
       </div>
       <p className="text-center text-gray-600 mb-16">
-        <span className="text-black">Note:</span> This area-chart represents
-        demo assignment-marks
+        <span className="text-black">Note:</span> This Area-Chart Represents
+        Assignment Marks
       </p>
     </div>
   );

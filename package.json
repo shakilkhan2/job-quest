@@ -1,5 +1,5 @@
 {
-  "name": "job-quest",
+  "name": "career-hub",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,11 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.17",
-    "flowbite": "^1.6.4",
-    "flowbite-react": "^0.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
     "react-router-dom": "^6.10.0",
     "recharts": "^2.5.0"
   },

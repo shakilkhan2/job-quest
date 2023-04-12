@@ -1,83 +1,117 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import InfoSection from "../infoSection/InfoSection";
+import { getJobs, storeJobs } from "../../utilities/storeJobs";
+import toast from "react-hot-toast";
 
 const JobDetails = () => {
-  const data = useLoaderData();
-  console.log(data);
+  const singleJob = useLoaderData();
+  const [applied, setApplied] = useState(false);
 
-  if (!data)
-    return (
-      <div className="w-full text-center">
-        <h1>Job Not Exist!</h1>
-      </div>
-    );
+  const handleApplied = () => {
+    const stored = storeJobs(singleJob);
+    if (!stored) {
+      toast.error("You have already Applied.");
+    } else {
+      toast.success("Successfully Applied.");
+      setApplied(true);
+    }
+  };
+
+  useEffect(() => {
+    const jobs = getJobs();
+    if (jobs) {
+      const isExist = jobs.find((job) => job === singleJob.id);
+      if (isExist) {
+        setApplied(true);
+      } else {
+        setApplied(false);
+      }
+    }
+  }, [singleJob]);
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-center pt-20 pb-40 bg-purple-50">
-        Job Details
-      </h1>
-      <div className="grid grid-cols-3 gap-8 m-36">
-        <div className="col-span-2">
-          <p>
-            <span className="text-md font-semibold w-60">Job Description:</span>{" "}
-            <span className="text-gray-600">{data?.job_description}</span>
-          </p>
-          <br />
-          <p>
-            <span className="text-md font-semibold w-60">
-              Job Responsibility:{" "}
-            </span>{" "}
-            <span className="text-gray-600">{data?.job_responsibility}</span>
-          </p>
-          <br />
-          <p>
-            <span className="text-md font-semibold w-60">
-              Educational Requirements:{" "}
-            </span>{" "}
-            <br />
-            <span className="text-gray-600">{data?.requirements}</span>
-          </p>
-          <br />
-          <p>
-            <span className="text-md font-semibold w-60">Experiences: </span>{" "}
-            <br />
-            <span className="text-gray-600"> {data?.experiences}</span>
-          </p>
-        </div>
-        <div>
-          <div className="w-full bg-gradient-to-r from-indigo-50 to-purple-100 border shadow-sm p-10 rounded-md mb-4">
-            <h1 className="text-xl font-bold">Job Details</h1>
-            <p>
-              <span className="text-md font-semibold w-60">Salary: </span>
-              <span className="text-gray-600">{data?.salary}</span>
-            </p>
-            <p>
-              <span className="text-md font-semibold w-60">Job Title: </span>
-              <span className="text-gray-600">{data?.job_title}</span>
-            </p>
-            <br />
-            <h1 className="text-xl font-bold">Contact Information</h1>
-            <p>
-              <span className="text-md font-semibold w-60">Phone: </span>
-              <span className="text-gray-600">{data?.phone}</span>
-            </p>
-            <p>
-              <span className="text-md font-semibold w-60">Email: </span>
-              <span className="text-gray-600">{data?.email}</span>
-            </p>
-            <p>
-              <span className="text-md font-semibold w-60">Address: </span>
-              <span className="text-gray-600">{data?.location}</span>
-            </p>
-          </div>
+    <>
+      <InfoSection name={"Job Details"} />
 
-          <button className=" w-full  md:my-0 bg-gradient-to-r from-violet-500 to-indigo-500 p-2 rounded-md text-white font-bold ">
-            Apply Now
+      <div className="my-10 w-[70%] mx-auto grid grid-cols-3 gap-4">
+        {/* Grid 1 */}
+        <div className="col-span-2">
+          <p className="text-sm text-gray-700 my-4">
+            <strong className="text-gray-800 mr-2 text-md">
+              Job Description:
+            </strong>
+            {singleJob.job_description}
+          </p>
+          <p className="text-sm text-gray-700 my-4">
+            <strong className="text-gray-800 mr-2 text-md">
+              Job Responsibility:
+            </strong>
+            {singleJob.job_responsibility}
+          </p>
+          <h1 className="text-sm text-gray-700 my-4">
+            <strong className="text-gray-800 mr-2 text-md">
+              Educational Requirements:
+            </strong>
+          </h1>
+          <p className="text-sm text-gray-700 my-4">{singleJob.requirements}</p>
+          <h1 className="text-sm text-gray-700 my-4">
+            <strong>Experiences:</strong>
+          </h1>
+          <p className="text-sm text-gray-700 my-4">{singleJob.experiences}</p>
+        </div>
+
+        {/* Grid 2 */}
+        <div>
+          <div className="bg-gradient-to-r from-[#f3f4ff] to-[#f6f1ff] p-6 rounded">
+            <div className="mb-6 w-[100px]">
+              <img src={singleJob.company_logo} className="w-full" alt="" />
+            </div>
+            <h1 className="font-semibold text-gray-600">Job Details</h1>
+            <hr className="my-3" />
+            <div>
+              <p className="text-sm my-2 text-gray-600">
+                <i className="bx bx-dollar-circle text-[#7E90FE]"></i>
+                <strong className="mx-2">Salary:</strong>
+                {singleJob.salary}
+              </p>
+              <p className="text-sm my-2 text-gray-600">
+                <i className="bx bx-rename text-[#7E90FE]"></i>
+                <strong className="mx-2">Job Title:</strong>
+                {singleJob.job_title}
+              </p>
+            </div>
+            <h1 className="font-semibold text-gray-600 mt-5">
+              Contact Information
+            </h1>
+            <hr className="my-3" />
+            <div>
+              <p className="text-sm my-2 text-gray-600">
+                <i className="bx bxs-phone text-[#7E90FE]"></i>
+                <strong className="mx-2">Phone:</strong>
+                {singleJob.phone}
+              </p>
+              <p className="text-sm my-2 text-gray-600">
+                <i className="bx bx-envelope text-[#7E90FE]"></i>
+                <strong className="mx-2">Email:</strong>
+                {singleJob.email}
+              </p>
+              <p className="text-sm my-2 text-gray-600">
+                <i className="bx bx-map text-[#7E90FE]"></i>
+                <strong className="mx-2">Address:</strong>
+                {singleJob.location}
+              </p>
+            </div>
+          </div>
+          <button
+            className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] py-3 px-4 rounded text-white text-sm font-medium hover:from-[#9873FF] hover:to-[#7E90FE] w-full my-6 disabled:from-[#a0adff] disabled:to-[#b195ff]"
+            onClick={handleApplied}
+          >
+            {applied ? "Already Applied" : "Apply Now"}
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,12 +1,10 @@
 import React from "react";
-import "./Blog.css";
+import InfoSection from "../infoSection/InfoSection";
 
 const Blog = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center pt-16 pb-20 bg-purple-50">
-        Common Questions
-      </h1>
+      <InfoSection name={" Common Questions"} />
 
       <div className="w-3/4 mx-auto my-8">
         <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500">

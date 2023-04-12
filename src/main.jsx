@@ -1,17 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 import App from "./App";
-import Statistics from "./components/Statistics/Statistics";
-import AppliedJobs from "./components/AppliedJobs/AppliedJobs";
-import Blog from "./components/Blog/Blog";
-import Home from "./components/Home/Home";
-import FeaturedJobs from "./components/FeaturedJobs/FeaturedJobs";
-import loadData from "./utils/loadData";
-import Error from "./components/Error/Error";
-import JobDetails from "./components/JobDetails/JobDetails";
-import Loading from "./components/Loading/Loading";
+import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./components/home/Home";
+import JobDetails from "./components/jobDetails/JobDetails";
+import AppliedJob from "./components/appliedJob/AppliedJob";
+import Statistics from "./components/statistics/Statistics";
+import Blog from "./components/blog/Blog";
+import { appliedJobs } from "./utilities/storeJobs";
+import Error from "./components/error/Error404";
 
 const router = createBrowserRouter([
   {
@@ -21,49 +19,41 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: async () => loadData(true),
-      },
-      {
-        path: "/job/:id",
-        element: <JobDetails />,
-        loader: async ({ params }) => {
-          const res = await fetch("/category.json");
-          const data = await res.json();
-
-          const job = data.find((single) => single.id === params.id);
-          if (job) {
-            return job;
-          } else {
-            return null;
-          }
+        loader: async () => {
+          const [category, jobs] = await Promise.all([
+            fetch("/data/category.json").then((res) => res.json()),
+            fetch("/data/jobs.json").then((res) => res.json()),
+          ]);
+          return { category, jobs };
         },
       },
       {
-        path: "statistics",
-        element: <Statistics />,
+        path: "/job-details/:id",
+        element: <JobDetails />,
+        loader: async ({ params }) => {
+          const res = await fetch("/data/jobs.json");
+          const data = await res.json();
+
+          const uniqueJob = data.find((job) => job.id === params.id);
+          return uniqueJob;
+        },
       },
       {
-        path: "applied-jobs",
-        element: <AppliedJobs />,
+        path: "/applied-job",
+        element: <AppliedJob />,
+        loader: async () => appliedJobs(),
       },
-      {
-        path: "blogs",
-        element: <Blog />,
-      },
-      {
-        path: "*",
-        element: <Error />,
-      },
-      {
-        path: "loading",
-        element: <Loading />,
-      },
+      { path: "/statistics", element: <Statistics /> },
+      { path: "/blog", element: <Blog /> },
     ],
   },
+  { path: "*", element: <Error /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
   </React.StrictMode>
 );
